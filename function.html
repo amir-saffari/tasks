@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // let arr = [1 , 5 , 8 , 4 , 6 , 2, 10];
+            
+            // function inBetween(min, max) {
+            //     return function (num) {
+            //         if (num >= min && num <= max) {
+            //             return true;
+            //         };
+            //     }  
+            // }
+            // function inArray(arr){
+            //     return function(num) {
+            //         return arr.includes(num);
+            //     }
+            // }
+            
+            // alert(arr.filter(inBetween(3 ,6)));
+            // alert(arr.filter(inArray([1,5,8,11])));
+
+            function makeCounter() {
+                let count = 0;
+
+                return function() {
+                    return count++;
+                };
+                }
+
+                let counter = makeCounter();
+
+                alert( makeCounter() ); // 0
+                alert( makeCounter() ); // 1
+                alert( makeCounter() ); // 2
+
+        
+    </script>
+</body>
+</html>
