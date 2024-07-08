@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sum input numbers(array)
+    function sumInput(){
+        let sum = 0;
+        let arr = new Array();
+
+        while (true){
+            input = prompt("enter a number , enter empty exit" , "");
+            if ( input == "" || !isFinite(input)) break;
+
+            arr.push(+input);            
+            }   
+
+        for( i=0 ; i<arr.length ; i++) {
+        sum += arr[i];
+        }
+
+        return sum;
+    }
+
+    alert( sumInput() );
+    
+
+    
+
+    </script>
+</body>
+</html>

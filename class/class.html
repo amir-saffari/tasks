@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // clock ticks in consol
+        class Clock {
+            constructor( {template} ) {
+                this.template = template
+            }
+
+            render() {
+                let date = new Date();
+
+                let hours = date.getHours();
+                if (hours < 10) hours = "0" + hours;
+
+                let minutes = date.getMinutes();
+                if (minutes < 10) hours = "0" + minutes;
+
+                let seconds = date.getSeconds();
+                if (seconds < 10) hours = "0" + seconds;
+
+                let output = this.template
+                    .replace("h" , hours)
+                    .replace("m" , minutes)
+                    .replace("s" , seconds);
+                console.log(output);
+            }
+            
+            start() {
+                this.render();
+                this.timer = setInterval(() => this.render(), 1000);
+            }
+
+            stop() {
+                clearInterval(this.timer , 5000)
+            }
+                
+                
+            }
+        
+        let myclock = new Clock({template: "h:m:s"})
+        myclock.start();
+        
+
+    </script>
+</body>
+</html>
