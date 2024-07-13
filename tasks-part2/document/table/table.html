@@ -2,18 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="table.css">
     <title>diagonal cells</title>
-
-    <style>
-        table {
-          border-collapse: collapse;
-        }
-
-        td {
-          border: 2px solid black;
-          padding: 3px 5px;
-        }
-    </style>
     
 </head>
 <body>
@@ -56,18 +46,12 @@
             <td>5:5</td>
           </tr>
     </table>
+
+    <script src="/tasks/tasks-part2/document/table/table.js"></script>
         
     
 </body>
 
-<script >
-  let table = document.body.firstElementChild;
 
-  for (let i = 0; i < table.rows.length; i++) { 
-     let row = table.rows[i];
-     
-     row.cells[i].style.backgroundColor = 'red';
-  }
-</script>
 
 </html>

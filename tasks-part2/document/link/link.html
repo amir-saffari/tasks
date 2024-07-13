@@ -15,20 +15,6 @@
     <li><a href="http://internal.com/test">http://internal.com/test</a></li>
     </ul>
 
-    <script>
-        
-        let links = document.querySelectorAll('a');
-
-        for (let link of links) {
-            let href = link.getAttribute('href');
-            if (!href) continue; 
-
-            if (!href.includes('://')) continue; 
-
-            if (href.startsWith('http://internal.com')) continue; 
-
-            link.style.color = 'orange';
-            }
-    </script>
+    <script src="/tasks/tasks-part2/document/link/link.js"></script>
 </body>
 </html>
