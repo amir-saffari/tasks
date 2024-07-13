@@ -6,23 +6,24 @@
 </head>
 <body>
     <script>
-            // let arr = [1 , 5 , 8 , 4 , 6 , 2, 10];
+        
+            let arr = [1 , 5 , 8 , 4 , 6 , 2, 10];
             
-            // function inBetween(min, max) {
-            //     return function (num) {
-            //         if (num >= min && num <= max) {
-            //             return true;
-            //         };
-            //     }  
-            // }
-            // function inArray(arr){
-            //     return function(num) {
-            //         return arr.includes(num);
-            //     }
-            // }
+            function inBetween(min, max) {
+                return function (num) {
+                    if (num >= min && num <= max) {
+                        return true;
+                    };
+                }  
+            }
+            function inArray(arr){
+                return function(num) {
+                    return arr.includes(num);
+                }
+            }
             
-            // alert(arr.filter(inBetween(3 ,6)));
-            // alert(arr.filter(inArray([1,5,8,11])));
+            alert(arr.filter(inBetween(3 ,6)));
+            alert(arr.filter(inArray([1,5,8,11])));
 
             
     </script>

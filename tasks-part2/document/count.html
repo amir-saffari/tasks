@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count descendants</title>
+</head>
+<body>
+    <!-- count descendants -->
+    <ul>
+        <li>Animals 
+          <ul>
+            <li>Mammals
+              <ul>
+                <li>Cows</li>
+                <li>Donkeys</li>
+                <li>Dogs</li>
+                <li>Tigers</li>
+              </ul>
+            </li>
+            <li>Other
+              <ul>
+                <li>Snakes</li>
+                <li>Birds</li>
+                <li>Lizards</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Fishes
+          <ul>
+            <li>Aquarium
+              <ul>
+                <li>Guppy</li>
+                <li>Angelfish</li>
+              </ul>
+            </li>
+            <li>Sea
+              <ul>
+                <li>Sea trout</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    <script>
+        for(let li of document.querySelectorAll("li")){
+            let text = li.firstChild.data;
+            
+            let count = li.getElementsByTagName("li").length;
+
+            alert(text  +  " descendants: " + count);
+        }
+    </script>
+</body>
+</html>

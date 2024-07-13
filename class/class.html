@@ -19,10 +19,10 @@
                 if (hours < 10) hours = "0" + hours;
 
                 let minutes = date.getMinutes();
-                if (minutes < 10) hours = "0" + minutes;
+                if (minutes < 10) minutes = "0" + minutes;
 
                 let seconds = date.getSeconds();
-                if (seconds < 10) hours = "0" + seconds;
+                if (seconds < 10) seconds = "0" + seconds;
 
                 let output = this.template
                     .replace("h" , hours)
@@ -43,8 +43,24 @@
                 
             }
         
-        let myclock = new Clock({template: "h:m:s"})
-        myclock.start();
+        // let myclock = new Clock({template: "h:m:s"})
+        // myclock.start();
+
+        class Ms extends Clock{
+            constructor(mSec){
+                super(mSec);
+                let {precision = 1000} = mSec; 
+                this.precision = precision
+            }
+            start(){
+                this.render();
+                this.timer = setInterval(() => this.render(), this.precision);
+            }
+
+        }
+        let precisionClass = new Ms({template: "h:m:s" , precision: 3000  });
+        precisionClass.start();
+        
         
 
     </script>
