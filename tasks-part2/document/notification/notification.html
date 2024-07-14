@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show notification</title>
+    <style>
+        .notification {
+            position: fixed;
+            z-index: 1000;
+            padding: 5px;
+            border: 1px solid black;
+            font-size: 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .welcome {
+            background: #201f1f;
+            color: rgb(250, 250, 247);
+        }
+    </style>
+</head>
+<body>
+    <h1>notification is on the right</h1>
+
+    <script>
+        
+        function showNotif({top = 0 , right = 0 , html , className}){
+            let notification = document.createElement('div');
+
+            notification.className = 'notification';
+
+            if (className) {
+                notification.classList.add(className);
+            }
+
+            notification.style.top = top + 'px';
+            notification.style.right = right + 'px';
+            notification.innerHTML = html; 
+
+            setTimeout(() => notification.remove() , 1500);
+            document.body.append(notification);
+            
+        }
+        let i = 1;
+        setInterval(() => {
+            showNotif({
+                top: 10,
+                right: 10,
+                html: 'Hello js ' + i++,
+                className: "welcome"
+            });
+            }, 2000);
+
+    </script>
+</body>
+</html>

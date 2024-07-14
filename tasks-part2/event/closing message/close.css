@@ -1,0 +1,42 @@
+body {
+    margin: 10px auto;
+    width: 470px;
+}
+
+p {
+color: aliceblue;
+margin: 0;
+padding: 0 0 .5em;
+}
+
+h3 {
+color: aliceblue;
+margin: 0;
+padding-bottom: .3em;
+padding-right: 20px;
+font-size: 1.1em;
+}
+
+.pane{
+    width: 400px; 
+    background-color: rgb(94, 94, 102);
+    border-top: 3px solid;
+    border-color: rgb(133, 145, 154);
+    padding: 10px 20px 10px;
+    position: relative;
+}
+
+.remove-button {
+    position: absolute;
+    font-size: 110%;
+    top: 0;
+    color: rgb(205, 3, 3);
+    right: 10px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
